@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <title>Web de Yingying</title>
+    <style>
+body {
+    padding: 0; /* Elimina l'espai extra al voltant del cos */
+}
+.container-fluid {
+    max-width: 100%; /* Assegura que la navbar ocupa tota l'amplada */
+}
 
+    
+    .navbar {
+    padding-left: 0; /* Elimina el padding esquerra de la navbar */
+}
+
+.logo {
+    margin-right: 20px; /* Ajustar el marge si vols separar el logo del text */
+    margin-left: 0; /* Assegurar que no hi hagi marge a l'esquerra */
+}
+
+    
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+
+}
+
+.brand-text {
+    white-space: nowrap; /* Això assegura que el text no es trenqui en múltiples línies */
+    font-size: 1.25rem; /* Ajusta la mida de la font si és necessari */
+}  
+.content-container {
+            margin-left: 10px;
+            margin-right: 10px; /* Marges laterals ajustats */
+            margin-top: 20px; /* Afegeix espai superior entre el contingut i la barra de menú */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+       <a class="navbar-brand d-flex align-items-center" href="#">
+    <img src="logo.png" alt="Logo" width="50" class="logo">
+    <span class="brand-text">Web de Yingying</span>
+</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inici</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tema 1</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Projectes</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://yjiang4pompeu.github.io/aliment">Ecològic?</a>
+                        <a class="dropdown-item" href="https://yjiang4pompeu.github.io/coldplay">Coldplay</a>
+                        <a class="dropdown-item" href="#">Projecte 3</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tema 2</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Contingut principal -->
+<div class="content-container">
+    <h1>Projecte Coldplay</h1>
+    <p>Fins al dia 15 de novembre estarem fent un projecte que enviarem al grup de música Coldplay. 
+      Aquest enviament serà un <a href="https://es.wikipedia.org/wiki/PechaKucha">PechaKucha</a></p>
+  <p>Un PechaKucha és una presentació professional que consta de 20 diapositives que dura 20 segons cadascuna, és a dir
+    una miqueta més de 6 minuts. Ha de ser molt visual i ha de contenir una mica de codi per explicar el que fem en 
+    anglès amb la nostra veu (podem utilitzar intel·ligència artificial i traductor per traduir i per pronunciar, com 
+    Google Translate) </p>
+  <p>El nostre projecte serà un visualitzador d'àudio en temps real per a Coldplay però personalitzat pel nou àlbum del 
+    4 d'octubre del 2024 anomenat Moon Music, per exemple podem animar una lluna creixent i fer que sigui més gran de 
+    tamany si el volum augmenta o que sigui més vermella si el so és més agut i que sigui més verda si el so és més greu.
+    A més de la lluna creixent altres figures podrien ser lluna decreixent i lluna completa. Si la cançó és a Sky full 
+    of stars s'animaren estrelles i es faran més gran depenent del volum i el color dependre de si és veu greu o més agut.
+    Si és la cançó We pray posarem el símbol de les mans pregant i es mouran apropant-se i separant-se amb el volum i canviant
+    de color per exemple de blanc a negre depenent del so, agut o greu. Els símbols d'infinit i d'un arc de Sant Martí
+    també s'utilitzen.</p>
+  <h2>Com ho farem?</h2>
+  <p>Utilitzarem HTML que és un llenguatge de marques <marca></marca>, CSS que és un llenguatge d'estil que ens permet jugar 
+    amb el tipus de lletra, marges, colors i el llenguatge més important JAVASCRIPT i dintre de JAVASCRIPT utilitzarem 
+    <a href="https://editor.p5js.org">p5.js</a>. Primer dibuixarem amb mà amb un paper milimetrat o una pàgina web creat 
+    pel professor un dibuix que serà relacionat amb Coldplay i que animarem a música de Coldplay</p>
+    <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
+    <ul>
+        <li>Aliments ecològics i convencionals amb JAVASCRIPT.</li>
+        <li>A partir dels logos i dels símbols de l'àlbum de Codplay farem que canviïn de color i mida i es mogui al ritme de la música, 
+            amb més volum o amb la freqüència. És a dir, farem una creació d'obra d'art gemètrica interactiva que reaccioni amb la meva veu a trvés d'un micròfon 
+            i a diferents tecles del teclat, al ratolí, que faci moviment repetitius amb sin i cos, moviments aleatoris amb random... Utilitzarem p5.js. </li>
+        <li>Contaminació atmosfèrica d'una ciutat catalana amb R.</li> 
+    </ul>
+</div>
+
+<!-- Scripts necessaris -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
