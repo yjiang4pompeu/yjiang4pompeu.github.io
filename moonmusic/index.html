@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heart, Crescent Moon, and Rainbow Animation</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart, Crescent Moon, and Rainbow Animation</title>
+  <style>
         body {
             display: flex;
             flex-direction: column;
@@ -79,47 +79,42 @@
                 height: auto;
             }
         }
-    </style>
-
-    <!-- Include Plyr CSS -->
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  </style>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 </head>
 <body>
-<h2 style="color: white;">Coldplay audio player</h2>
-<div class="controls-container">
-    <input type="file" id="audio-upload" accept="audio/*" />
-    <select id="shape-selector">
-        <option value="heart">Heart</option>
-        <option value="moon">Crescent Moon</option>
-        <option value="rainbow">Rainbow</option>
+  <h2 style="color: white;">Coldplay audio player</h2>
+  <div class="controls-container">
+    <input type="file" id="audio-upload" accept="audio/*"> <select id="shape-selector">
+      <option value="heart">
+        Heart
+      </option>
+      <option value="moon">
+        Crescent Moon
+      </option>
+      <option value="rainbow">
+        Rainbow
+      </option>
     </select>
-
-    <!-- Display the song title here -->
-    <h2 id="song-title"></h2>
-
-    <!-- Audio element for Plyr -->
-    <audio id="player" class="plyr" controls></audio>
-
-    <!-- Default HTML5 audio player -->
+    <h2 id="song-title"></h2><audio id="player" class="plyr" controls=""></audio>
     <div class="default-player">
-        <audio id="default-player" controls></audio>
+      <audio id="default-player" controls=""></audio>
     </div>
-</div>
+  </div>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script> 
+  <script>
 
-<!-- Include Plyr JS -->
-<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
 
-<script>
-let amplitude, fft;
-let song;
-let shapes = [];
-let numShapes = 10;
-let selectedShape = 'heart';
-let player;
+  let amplitude, fft;
+  let song;
+  let shapes = [];
+  let numShapes = 10;
+  let selectedShape = 'heart';
+  let player;
 
-function setup() {
+  function setup() {
     let canvas = createCanvas(600, 600);
     canvas.parent(document.body);
     canvas.style('max-width', '100%');
@@ -150,9 +145,9 @@ function setup() {
         document.querySelector('.plyr').style.display = 'none';
         document.querySelector('.default-player').style.display = 'block';
     }
-}
+  }
 
-function draw() {
+  function draw() {
     background('#0d335f');
 
     if (!song || !song.isPlaying()) {
@@ -192,207 +187,207 @@ function draw() {
 
       pop();
    });
-}
+  }
 
-function drawHeart() {
+  function drawHeart() {
     beginShape();
     beginShape();//c from Coldplay
-vertex(135, 25.1875);
-vertex(129, 24.1875);
-vertex(122, 24.1875);
-vertex(115, 26.1875);
-vertex(110, 29.1875);
-vertex(106, 34.1875);
-vertex(102, 38.1875);
-vertex(99, 46.1875);
-vertex(96, 56.1875);
-vertex(98, 64.1875);
-vertex(101, 72.1875);
-vertex(108, 79.1875);
-vertex(118, 84.1875);
-vertex(125, 84.1875);
-vertex(133, 84.1875);
-vertex(125, 80.1875);
-vertex(118, 76.1875);
-vertex(113, 67.1875);
-vertex(110, 57.1875);
-vertex(110, 47.1875);
-vertex(114, 38.1875);
-vertex(120, 33.1875);
-vertex(126, 29.1875);
-endShape(CLOSE);
+  vertex(135, 25.1875);
+  vertex(129, 24.1875);
+  vertex(122, 24.1875);
+  vertex(115, 26.1875);
+  vertex(110, 29.1875);
+  vertex(106, 34.1875);
+  vertex(102, 38.1875);
+  vertex(99, 46.1875);
+  vertex(96, 56.1875);
+  vertex(98, 64.1875);
+  vertex(101, 72.1875);
+  vertex(108, 79.1875);
+  vertex(118, 84.1875);
+  vertex(125, 84.1875);
+  vertex(133, 84.1875);
+  vertex(125, 80.1875);
+  vertex(118, 76.1875);
+  vertex(113, 67.1875);
+  vertex(110, 57.1875);
+  vertex(110, 47.1875);
+  vertex(114, 38.1875);
+  vertex(120, 33.1875);
+  vertex(126, 29.1875);
+  endShape(CLOSE);
     beginShape();//o from Coldplay
-vertex(179, 28.1875);
-vertex(191, 23.1875);
-vertex(201, 24.1875);
-vertex(210, 28.1875);
-vertex(216, 32.1875);
-vertex(224, 41.1875);
-vertex(227, 54.1875);
-vertex(226, 65.1875);
-vertex(221, 73.1875);
-vertex(214, 80.1875);
-vertex(202, 85.1875);
-vertex(186, 85.1875);
-vertex(173, 79.1875);
-vertex(165, 67.1875);
-vertex(162, 53.1875);
-vertex(166, 42.1875);
-endShape(CLOSE);
+  vertex(179, 28.1875);
+  vertex(191, 23.1875);
+  vertex(201, 24.1875);
+  vertex(210, 28.1875);
+  vertex(216, 32.1875);
+  vertex(224, 41.1875);
+  vertex(227, 54.1875);
+  vertex(226, 65.1875);
+  vertex(221, 73.1875);
+  vertex(214, 80.1875);
+  vertex(202, 85.1875);
+  vertex(186, 85.1875);
+  vertex(173, 79.1875);
+  vertex(165, 67.1875);
+  vertex(162, 53.1875);
+  vertex(166, 42.1875);
+  endShape(CLOSE);
     beginShape();//l from Coldplay
-vertex(266, 28.1875);
-vertex(260, 33.1875);
-vertex(254, 43.1875);
-vertex(253, 57.1875);
-vertex(258, 67.1875);
-vertex(264, 74.1875);
-vertex(270, 79.1875);
-vertex(279, 82.1875);
-vertex(288, 82.1875);
-vertex(296, 80.1875);
-vertex(303, 76.1875);
-vertex(306, 73.1875);
-vertex(296, 75.1875);
-vertex(286, 75.1875);
-vertex(278, 74.1875);
-vertex(272, 70.1875);
-vertex(263, 61.1875);
-vertex(260, 51.1875);
-vertex(260, 42.1875);
-vertex(264, 33.1875);
-endShape(CLOSE);
+  vertex(266, 28.1875);
+  vertex(260, 33.1875);
+  vertex(254, 43.1875);
+  vertex(253, 57.1875);
+  vertex(258, 67.1875);
+  vertex(264, 74.1875);
+  vertex(270, 79.1875);
+  vertex(279, 82.1875);
+  vertex(288, 82.1875);
+  vertex(296, 80.1875);
+  vertex(303, 76.1875);
+  vertex(306, 73.1875);
+  vertex(296, 75.1875);
+  vertex(286, 75.1875);
+  vertex(278, 74.1875);
+  vertex(272, 70.1875);
+  vertex(263, 61.1875);
+  vertex(260, 51.1875);
+  vertex(260, 42.1875);
+  vertex(264, 33.1875);
+  endShape(CLOSE);
     beginShape();//d from Coldplay
-vertex(336, 29.1875);
-vertex(344, 32.1875);
-vertex(351, 37.1875);
-vertex(355, 46.1875);
-vertex(358, 56.1875);
-vertex(355, 67.1875);
-vertex(350, 75.1875);
-vertex(344, 81.1875);
-vertex(338, 84.1875);
-vertex(346, 86.1875);
-vertex(355, 84.1875);
-vertex(363, 81.1875);
-vertex(372, 72.1875);
-vertex(376, 60.1875);
-vertex(374, 46.1875);
-vertex(369, 36.1875);
-vertex(361, 29.1875);
-vertex(348, 26.1875);
-vertex(339, 26.1875);
-endShape(CLOSE);
+  vertex(336, 29.1875);
+  vertex(344, 32.1875);
+  vertex(351, 37.1875);
+  vertex(355, 46.1875);
+  vertex(358, 56.1875);
+  vertex(355, 67.1875);
+  vertex(350, 75.1875);
+  vertex(344, 81.1875);
+  vertex(338, 84.1875);
+  vertex(346, 86.1875);
+  vertex(355, 84.1875);
+  vertex(363, 81.1875);
+  vertex(372, 72.1875);
+  vertex(376, 60.1875);
+  vertex(374, 46.1875);
+  vertex(369, 36.1875);
+  vertex(361, 29.1875);
+  vertex(348, 26.1875);
+  vertex(339, 26.1875);
+  endShape(CLOSE);
     beginShape();p from Colplay
-vertex(402, 41.1875);
-vertex(407, 35.1875);
-vertex(416, 30.1875);
-vertex(425, 29.1875);
-vertex(431, 29.1875);
-vertex(439, 30.1875);
-vertex(448, 35.1875);
-vertex(453, 41.1875);
-vertex(456, 48.1875);
-vertex(458, 56.1875);
-vertex(459, 66.1875);
-vertex(456, 73.1875);
-vertex(451, 78.1875);
-vertex(447, 83.1875);
-vertex(444, 83.1875);
-vertex(447, 76.1875);
-vertex(449, 67.1875);
-vertex(449, 60.1875);
-vertex(447, 53.1875);
-vertex(440, 45.1875);
-vertex(429, 39.1875);
-vertex(418, 37.1875);
-vertex(407, 39.1875);
-endShape(CLOSE);
+  vertex(402, 41.1875);
+  vertex(407, 35.1875);
+  vertex(416, 30.1875);
+  vertex(425, 29.1875);
+  vertex(431, 29.1875);
+  vertex(439, 30.1875);
+  vertex(448, 35.1875);
+  vertex(453, 41.1875);
+  vertex(456, 48.1875);
+  vertex(458, 56.1875);
+  vertex(459, 66.1875);
+  vertex(456, 73.1875);
+  vertex(451, 78.1875);
+  vertex(447, 83.1875);
+  vertex(444, 83.1875);
+  vertex(447, 76.1875);
+  vertex(449, 67.1875);
+  vertex(449, 60.1875);
+  vertex(447, 53.1875);
+  vertex(440, 45.1875);
+  vertex(429, 39.1875);
+  vertex(418, 37.1875);
+  vertex(407, 39.1875);
+  endShape(CLOSE);
     beginShape();//l from Coldplay
-vertex(495, 30.1875);
-vertex(489, 36.1875);
-vertex(485, 45.1875);
-vertex(484, 57.1875);
-vertex(489, 69.1875);
-vertex(496, 77.1875);
-vertex(503, 81.1875);
-vertex(510, 83.1875);
-vertex(519, 83.1875);
-vertex(527, 81.1875);
-vertex(533, 78.1875);
-vertex(537, 72.1875);
-vertex(528, 75.1875);
-vertex(519, 77.1875);
-vertex(510, 74.1875);
-vertex(502, 70.1875);
-vertex(496, 64.1875);
-vertex(492, 56.1875);
-vertex(491, 45.1875);
-vertex(494, 33.1875);
+  vertex(495, 30.1875);
+  vertex(489, 36.1875);
+  vertex(485, 45.1875);
+  vertex(484, 57.1875);
+  vertex(489, 69.1875);
+  vertex(496, 77.1875);
+  vertex(503, 81.1875);
+  vertex(510, 83.1875);
+  vertex(519, 83.1875);
+  vertex(527, 81.1875);
+  vertex(533, 78.1875);
+  vertex(537, 72.1875);
+  vertex(528, 75.1875);
+  vertex(519, 77.1875);
+  vertex(510, 74.1875);
+  vertex(502, 70.1875);
+  vertex(496, 64.1875);
+  vertex(492, 56.1875);
+  vertex(491, 45.1875);
+  vertex(494, 33.1875);
     beginShape();//a from Colplay
-vertex(564, 65.1875);
-vertex(564, 51.1875);
-vertex(570, 41.1875);
-vertex(578, 34.1875);
-vertex(590, 31.1875);
-vertex(602, 31.1875);
-vertex(612, 37.1875);
-vertex(619, 45.1875);
-vertex(622, 52.1875);
-vertex(623, 61.1875);
-vertex(623, 66.1875);
-vertex(618, 57.1875);
-vertex(615, 53.1875);
-vertex(609, 48.1875);
-vertex(601, 44.1875);
-vertex(590, 43.1875);
-vertex(583, 44.1875);
-vertex(576, 48.1875);
-vertex(571, 55.1875);
-vertex(566, 63.1875);
-endShape(CLOSE);
+  vertex(564, 65.1875);
+  vertex(564, 51.1875);
+  vertex(570, 41.1875);
+  vertex(578, 34.1875);
+  vertex(590, 31.1875);
+  vertex(602, 31.1875);
+  vertex(612, 37.1875);
+  vertex(619, 45.1875);
+  vertex(622, 52.1875);
+  vertex(623, 61.1875);
+  vertex(623, 66.1875);
+  vertex(618, 57.1875);
+  vertex(615, 53.1875);
+  vertex(609, 48.1875);
+  vertex(601, 44.1875);
+  vertex(590, 43.1875);
+  vertex(583, 44.1875);
+  vertex(576, 48.1875);
+  vertex(571, 55.1875);
+  vertex(566, 63.1875);
+  endShape(CLOSE);
     beginShape();//y from Coldplay
-vertex(645, 31.1875);
-vertex(655, 34.1875);
-vertex(661, 40.1875);
-vertex(665, 45.1875);
-vertex(667, 51.1875);
-vertex(670, 60.1875);
-vertex(669, 64.1875);
-vertex(665, 74.1875);
-vertex(660, 79.1875);
-vertex(654, 83.1875);
-vertex(647, 87.1875);
-vertex(656, 89.1875);
-vertex(665, 86.1875);
-vertex(674, 79.1875);
-vertex(679, 70.1875);
-vertex(681, 63.1875);
-vertex(681, 55.1875);
-vertex(678, 45.1875);
-vertex(673, 40.1875);
-vertex(665, 32.1875);
-vertex(655, 30.1875);
-endShape(CLOSE);
+  vertex(645, 31.1875);
+  vertex(655, 34.1875);
+  vertex(661, 40.1875);
+  vertex(665, 45.1875);
+  vertex(667, 51.1875);
+  vertex(670, 60.1875);
+  vertex(669, 64.1875);
+  vertex(665, 74.1875);
+  vertex(660, 79.1875);
+  vertex(654, 83.1875);
+  vertex(647, 87.1875);
+  vertex(656, 89.1875);
+  vertex(665, 86.1875);
+  vertex(674, 79.1875);
+  vertex(679, 70.1875);
+  vertex(681, 63.1875);
+  vertex(681, 55.1875);
+  vertex(678, 45.1875);
+  vertex(673, 40.1875);
+  vertex(665, 32.1875);
+  vertex(655, 30.1875);
+  endShape(CLOSE);
     beginShape();//cercle from Coldplay
-vertex(689, 30.1875);
-vertex(681, 37.1875);
-vertex(684, 47.1875);
-vertex(690, 50.1875);
-vertex(698, 48.1875);
-vertex(701, 40.1875);
-vertex(697, 32.1875);
-endShape(CLOSE);
-}
+  vertex(689, 30.1875);
+  vertex(681, 37.1875);
+  vertex(684, 47.1875);
+  vertex(690, 50.1875);
+  vertex(698, 48.1875);
+  vertex(701, 40.1875);
+  vertex(697, 32.1875);
+  endShape(CLOSE);
+  }
 
-function drawCrescentMoon() {
+  function drawCrescentMoon() {
    // Dibuix de la lluna creixent
    fill(0);
    ellipse(0, 0, 50, 100); // Lluna plena
    fill('#0d335f');
    ellipse(10, 0, 50, 100); // Ombra per crear la creixent
-}
+  }
 
-function drawRainbow() {
+  function drawRainbow() {
    // Dibuix d'un arc de Sant Martí
    let radius = 50;
    let colors = ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#8B00FF']; // Colors de l'arc de Sant Martí
@@ -402,9 +397,9 @@ function drawRainbow() {
        noFill();
        arc(0, 0, radius + i * 10, radius + i * 10, PI, TWO_PI); // Dibuixar arcs concèntrics amb diferents colors
    }
-}
+  }
 
-function handleFileUpload(event) {
+  function handleFileUpload(event) {
    let file = event.target.files[0];
    if (file && file.type.startsWith('audio/')) {
        let fileURL = URL.createObjectURL(file);
@@ -431,9 +426,9 @@ function handleFileUpload(event) {
    } else {
        console.error('Please upload a valid audio file');
    }
-}
+  }
 
-function soundLoaded(loadedSong) {
+  function soundLoaded(loadedSong) {
    if (song && song.isPlaying()) {
        song.stop();
    }
@@ -441,8 +436,7 @@ function soundLoaded(loadedSong) {
    song.play();
    amplitude.setInput(song);
    fft.setInput(song);
-}
-</script>
-
+  }
+  </script>
 </body>
 </html>
