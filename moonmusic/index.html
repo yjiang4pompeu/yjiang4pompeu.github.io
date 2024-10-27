@@ -173,8 +173,8 @@ function draw() {
     noFill();
     stroke(r, g, b);
     strokeWeight(3);
-    fill(r,g,b);//aquesta línea nova omple de color rgb i l'anterior feia el contorn.
-    //the previous line fills the shapes below with the rgb colors obtained from sound frequencies (bass and treble) and volume (level)
+    //fill(r,g,b);//aquesta línea nova omple de color rgb i l'anterior feia el contorn.
+    //the previous line fills the shapes below with the rgb colors obtained from sound frequencies (bass and treble) and volume (level) 
 
     // Dibuixar múltiples formes (cors, llunes o arcs de Sant Martí)
     shapes.forEach(shape => {
@@ -195,7 +195,7 @@ function draw() {
 }
 
 function drawHeart() {
-  beginShape();//c from coldplay
+ beginShape();//c from coldplay
 vertex(136, 25.1875);
 vertex(125, 25.1875);
 vertex(114, 28.1875);
@@ -357,21 +357,12 @@ vertex(675, 43.1875);
 vertex(668, 36.1875);
 vertex(660, 31.1875);
 endShape(CLOSE);
-    beginShape();//cercle from coldplay
-vertex(687, 31.1875);
-vertex(696, 32.1875);
-vertex(701, 38.1875);
-vertex(699, 47.1875);
-vertex(692, 50.1875);
-vertex(684, 47.1875);
-vertex(681, 40.1875);
-vertex(683, 33.1875);
-endShape(CLOSE);
-   
+
+    
 }
 
 function drawCrescentMoon() {
-      scale(0.5);
+    scale(0.5);
     beginShape();//ala esquerra
 vertex(294, 191.1875);
 vertex(275, 189.1875);
@@ -518,11 +509,9 @@ vertex(439, 307.1875);
 vertex(437, 321.1875);
 vertex(439, 338.1875);
 endShape(CLOSE);
-   
-}
 
-function drawRainbow() {
-    beginShape();//centre cercles
+    function drawRainbow() {
+  beginShape();//centre cercles
 vertex(67, 216.1875);
 vertex(69, 199.1875);
 vertex(73, 186.1875);
@@ -1101,7 +1090,6 @@ vertex(194, 117.1875);
 vertex(189, 135.1875);
 vertex(181, 140.1875);
 endShape(CLOSE);
-
    // Dibuix d'un arc de Sant Martí
    let radius = 50;
    let colors = ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#8B00FF']; // Colors de l'arc de Sant Martí
