@@ -1,6 +1,6 @@
 <!--Aquesta web com totes les pàgines webs té tres parts amb tres llenguatges diferents, la primera part és HTML que significa
 llenguatge de marques hipertext (vol dir que va més enllà del text: vídeo, imatges, ect) i permet el contingut estàtic que no varia amb 
-el temps o amb un click.Si fos un humà seria l'esquelet. Les marques són <marca> i a vegades final de </marca>. Hi ha dos parts dins del
+el temps o amb un click. Si fos un humà seria l'esquelet. Les marques són <marca> i a vegades final de </marca>. Hi ha dos parts dins del
 HTML, una és el head o capçalera  i un altre és el body on poso el codi principal, el head és on poso metainformació que vol dir marques 
 o etiquetes que em diuen el tipus de caràcters (charset) i ens diu que la pàgina web s'adapti el dispositiu (pc, mòbil, televisió, cinema, 
 tablet) perquè width=device-witdh que vol dir qu l'amplada del que veiem sigui igual a l'amplada del dipositiu. El title es veu a la pestanya. 
@@ -13,16 +13,31 @@ amb aquest símbol < > si no que escriu el nom de la marca {propietat1: valor1; 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heart, Crescent Moon, and Rainbow Animation</title>
+    <title>Moving Shapes</title>
     <style>
         body {
             border: 5px;/* això farà que tot el cos del codi (body) tingui 5 pixls de gruix en totes direcions*/
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: center;/* alinia tot en el centre*/
             justify-content: center;
             min-height: 100vh;
-            background-color: #0d335f;
+            background-color: #0d335f;/* color de fons*/
+        /*els colors es poden escriure amb el seu nom en anglès.
+        Es poden escriure amb RGB (red, Green, Blue) i podem posar un número, dos números, tres números i quatre 
+        números. Si posem un sol número és l'escala de grisos sent 0 negre i 255 blanc (127 seria un gris, un gris fos seria 200
+        i un gris clar 50). Si posem dos números, el primer és l'escala de grisos i el segon la transparència o canal alfa sent 0
+        transparent i 255 opac (127 semitransparent).
+        Si posem tres números són red, green i blue. Per exemple 255,0,0 és el vermell més fort; 0,255,0 és el verd més intens; 0,0,255
+        és el blau més fort. Quant color diferents tenim? 255·255·255= 16.700.000 color diferents. Si escric color picker RGB GTML puc 
+        trobar qualsevol color, per exemple un estil de rosa és rgb (255,51,153). Aquest mateix color de rosa el puc posar en múmeros 
+        hexadecimals. Els números hexadecimals són del  zero al nou, el 10 és A, 11 és B, 12 és C, 13 és D, 14 és E i 15 és F i així tenim
+        16 números diferents, que és el significat d'hexadeciamal. El número FF0000 és igual que 255,0,0; el número 00FF00 és igual que 0,255,0:
+        0000FF és igual que 0,0,255. Per què FF és 255? 255= 2·10^2+5·10^1+5·10^0=200+50+5 i FF és en base 16 i no en base 10, FF és igual a
+        15·16^1+15·16^0=240+15=255. Quant és CACA00? CA=12·16^1+10·16^0=202, per tant CACA00 seria 202,202,0 que és un color groc. 0D335F
+        OD=0·16^1+14·16^0=240 33=3·16^1+16^0=51 o sigui 33 en hexadecimal és 51 en decimal. 5F=5·16^1+15·16^0=95. És a dir, és el color RGB 240,51,95 
+        que és un rosa. 
+            
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
