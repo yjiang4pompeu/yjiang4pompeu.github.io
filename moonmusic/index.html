@@ -144,30 +144,24 @@ let shapes = [];
 let numShapes = 10;
 let selectedShape = 'heart';
 let player;
-
 function setup() {
     let canvas = createCanvas(600, 600);
     canvas.parent(document.body);
     canvas.style('max-width', '100%');
     canvas.style('height', 'auto');
-
     amplitude = new p5.Amplitude();
     fft = new p5.FFT();
-
     for (let i = 0; i < numShapes; i++) {
         let x = random(width);
         let y = random(height);
         shapes.push({x: x, y: y});
     }
-
     let fileInput = document.getElementById('audio-upload');
     fileInput.addEventListener('change', handleFileUpload);
-
     let shapeSelector = document.getElementById('shape-selector');
     shapeSelector.addEventListener('change', function() {
         selectedShape = this.value;
     });
-
     // Initialize Plyr with fallback
     try {
         player = new Plyr('#player');
