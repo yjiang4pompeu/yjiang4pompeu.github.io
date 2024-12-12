@@ -10,19 +10,22 @@
 }
 .container-fluid {
     max-width: 100%; /* Assegura que la navbar ocupa tota l'amplada */
-}  
-        .navbar {
+}
+    .navbar {
     padding-left: 0; /* Elimina el padding esquerra de la navbar */
 }
 .logo {
     margin-right: 20px; /* Ajustar el marge si vols separar el logo del text */
     margin-left: 0; /* Assegurar que no hi hagi marge a l'esquerra */
 }
-.navbar-brand {
+    .navbar-brand {
     display: flex;
     align-items: center;
 }
+
+
 }
+
 .brand-text {
     white-space: nowrap; /* Això assegura que el text no es trenqui en múltiples línies */
     font-size: 1.25rem; /* Ajusta la mida de la font si és necessari */
@@ -51,7 +54,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://yjiang4.github.io">Inici</a>
+                    <a class="nav-link" href="#">Inici</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Tema 1</a>
@@ -61,9 +64,9 @@
                         aria-expanded="false">Projectes</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="https://yjiang4pompeu.github.io/aliment">Ecològic?</a>
-                        <a class="dropdown-item" href="https://yjiang4pompeu.github.io/coldplay">Coldplay</a
-                        <a class="dropdown-item" href="https://yjiang4pompeu.github.io/moonmusic">Moon Music</a>
-                        <a class="dropdown-item" href="https://yjiang4pompeu.github.io/jeanvalentine">Jean Valentine</a>
+                        <a class="dropdown-item" href="https://yjiang4pompeu.github.io/coldplay">Coldplay</a>
+                        <a class="dropdown-item" href="https://yjiang4pompeu.github.io/moonmusic">Moon music</a>
+                        <a class="dropdown-item" href="https://yjiang4pompeu.github.io/valentine">Jean Valentine</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -77,14 +80,24 @@
 <!-- Contingut principal -->
 <div class="content-container">
     <h1>Pasos per fer una figura animada</h1>
-    <p></p>
-    <ol> 
-        <li>Descarregar GIMP, per exemple des del company portal de la Generalitat i descarregar el Pivot Animator</li>
-        <li>L'objectiu de GIMP és retallar les parts del nostre cantant (cap, braços, cames,...) per després animar-los
-        amb GIMP</li>
-        <li>Busquem una imatge del nostre cantant preferit i li tallem les parts del cos</li> 
-        <li>Obrim l'imatge en fitxer>obre</li>
-        <li>Cliquem al menú capes>afegeix canal alfa (transparència) </li>
+    <ol>
+        <li>Descaregar Gimp des del Company Portal de la Generalitat i decarregar el pivot animator.</li>
+        <li>L'objectiu de Gimp és retallar les parts del nostre cantant (cap, barços, cames, etc)
+        per després animarlos amb Gimp</li>
+    <li>Busquem una imatge del nostre cantant preferit i li retallem les parts del cos</li>
+<li>Obrim l'imatge amb Fitxer>Obre</li>
+<li>Cliquem al menú Capes >Transparència>Afageix canal alfa</li>
+          <li>Clica sobre les eines sobre el llaç que fa una selecció lliure fent clics al voltant de la part del cos que ens interesa i
+          una mica més perquè no quedi buit quan es mou. Fem doble clic quan donem tota la volta i arribem al principi.</li>
+          <li>Cliquem al menú imatge i dins a Escapça a selecció i això crea un tros o part del cos retallatada.</li>
+          <li>Clicar Selecciona i Inverteix dintre de Selecció.</li>
+          <li>Clica Edita i dintre Retalla.</li>
+          <li>Cliquem al llaç per seleccionar les àreas que volem borrar. </li>
+          <li>Cliquem Edita i dintre Retlla.</li>
+          <li>Cliquem a Selecciona i dintre Cap i ara tenim la part del cos competa i buida si cal.</li>
+          <li>Cliquem Borrador i posem mida 20.</li>
+          <li>Cliquem Selecciona i dintre Cap i fifuminem el coll o la zona de unió de parts.</li>
+          <li>Per acabar Fitxer i Anomena i Expota com a png.</li>
     </ol>
 </div>
 
@@ -92,5 +105,6 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
 </body>
 </html>
