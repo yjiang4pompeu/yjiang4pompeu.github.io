@@ -67,8 +67,8 @@
     let modelsMostrats = false;
 
     // Mida virtual que es manté proporcional a qualsevol pantalla
-    const VIRTUAL_W = 1200;
-    const VIRTUAL_H = 600;
+    const VIRTUAL_W = 600;
+    const VIRTUAL_H = 418;
 
     // Funció que es crida al començar
     function setup() {
@@ -147,7 +147,7 @@
     // Dibuixa diferents figures depenent de l'estat emocional
     function drawArt(dominant, intensity) {
       noFill();
-      strokeWeight(4);
+      strokeWeight(1);
 
       switch (dominant) {
         case 'happy':     
@@ -1159,7 +1159,6 @@ endShape(CLOSE);
 vertex(306, 171.1875);
 vertex(407, 118.1875);
 endShape(CLOSE);
-            stroke(255, 227, 43); // groc
  beginShape();//recte diagonal centre dalt 4
 vertex(359, 164.1875);
 vertex(422, 109.1875);
