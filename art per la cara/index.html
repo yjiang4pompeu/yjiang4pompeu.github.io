@@ -4614,12 +4614,27 @@ vertex(557, 213.1875);
 endShape(CLOSE); 
           break;
 
-        case 'fearful':
-      
+         case 'disgusted':
+          stroke(0,150,0,150); // verd
+          beginShape();
+          for (let i = 0; i < 12; i++) {
+            let angle = map(i, 0, 12, 0, TWO_PI);
+            let r = 75 + random(-50, 50) * intensity;
+            let x = VIRTUAL_W/2 + r * cos(angle);
+            let y = VIRTUAL_H/2 + r * sin(angle);
+            vertex(x, y);
+          }
+          endShape(CLOSE);
           break;
 
-        case 'disgusted':
-          
+        default:
+          stroke(150,150,150,150); // gris suau
+          beginShape();
+          vertex(0, 0);
+          vertex(VIRTUAL_W, 0);
+          vertex(VIRTUAL_W, VIRTUAL_H);
+          vertex(0, VIRTUAL_H);
+          endShape(CLOSE);
 
       }
     }
