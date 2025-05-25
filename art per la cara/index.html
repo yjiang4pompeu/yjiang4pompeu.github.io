@@ -148,7 +148,22 @@
     function drawArt(dominant, intensity) {
       noFill();
       strokeWeight(1);
+      
+function setup() {
+  createCanvas(600,418);
+}
 
+function draw() {
+  background(255);
+
+  // Rebote alegre
+  let bounce = abs(sin(frameCount * 0.1)) * 20;
+  let scaleY = 1 + sin(frameCount * 0.1) * 0.05;
+
+  push();
+  translate(150, 150 + bounce);
+  scale(1, scaleY);
+  
       switch (dominant) {
         case 'happy':     
           stroke(255, 137, 0); // taronja 
@@ -195,6 +210,7 @@ vertex(18, 59.1875);
 vertex(21, 51.1875);
 vertex(26, 43.1875);
 endShape(CLOSE);
+pop();
  beginShape();//cercle espequerra superior mitjà
 vertex(55, 59.1875);
 vertex(63, 55.1875);
