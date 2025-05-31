@@ -148,22 +148,6 @@
     function drawArt(dominant, intensity) {
       noFill();
       strokeWeight(1);
-      
-let dominant = 'happy'; 
-function setup() {
-  createCanvas(600,418);
-}
-
-function draw() {
-  background(255);
-
-  // Rebot alegre
-  let bounce = abs(sin(frameCount * 0.1)) * 20;
-  let scaleY = 1 + sin(frameCount * 0.1) * 0.05;
-
-  push();
-  translate(150, 150 + bounce);
-  scale(1, scaleY);
   
       switch (dominant) {
         case 'happy':     
