@@ -150,7 +150,7 @@
       strokeWeight(1);
   
       switch (dominant) {
-        case 'happy':     
+       case 'happy':     
           stroke(255, 137, 0); // taronja 
  beginShape();//cercle negre esquerra superior gran
 vertex(17, 64.1875);
@@ -3305,7 +3305,7 @@ vertex(589, 215.1875);
 endShape();
           break;
           
-        case 'disgusted':
+         'disgusted':
          stroke(213, 223, 182); // gris verdós
 beginShape();//cercle negre esquerra superior gran
 vertex(26, 44.1875);
@@ -5242,7 +5242,7 @@ vertex(557, 213.1875);
 endShape(CLOSE);   
           break;
           
-          case 'angry':
+        case 'angry':
   stroke(255, 0, 0); // vermell
 beginShape();//cercle negre esquerra superior gran
 vertex(41, 31.1875);
@@ -6735,7 +6735,7 @@ vertex(557, 213.1875);
 endShape(CLOSE);   
           break;
           
-            case 'sad':
+             'sad':
  stroke(1, 20, 180 ); // blau
 beginShape();//cercle esquerra superior gran
 vertex(26, 44.1875);
@@ -8073,7 +8073,7 @@ vertex(560, 142.1875);
 vertex(557, 213.1875);
 endShape(CLOSE); 
           break;
-        case 'surprise':     
+        case 'surprised':     
           stroke(216, 214, 215); // gris
 beginShape();//cercle negre esquerra superior gran
 vertex(26, 44.1875);
@@ -8451,10 +8451,11 @@ vertex(446, 332.1875);
 vertex(446, 328.1875);
 vertex(446, 324.1875);
 endShape(CLOSE);
-
-
-          
- beginShape();//cercle dreta inferior 1
+beginShape();//dents
+vertex(445, 327.1875);
+vertex(452, 327.1875);
+endShape();        
+ beginShape();//cercle gris dreta inferior 
 vertex(441, 305.1875);
 vertex(447, 304.1875);
 vertex(453, 304.1875);
@@ -8473,31 +8474,42 @@ vertex(431, 316.1875);
 vertex(434, 310.1875);
 vertex(440, 305.1875);
 endShape(CLOSE);
-vertex(504, 325.1875);
-vertex(510, 322.1875);
-vertex(519, 321.1875);
-vertex(528, 323.1875);
-vertex(535, 328.1875);
-vertex(540, 332.1875);
-vertex(544, 338.1875);
-vertex(546, 344.1875);
-vertex(546, 351.1875);
-vertex(546, 358.1875);
-vertex(543, 365.1875);
-vertex(538, 371.1875);
-vertex(532, 376.1875);
-vertex(526, 378.1875);
-vertex(517, 380.1875);
-vertex(507, 377.1875);
-vertex(499, 373.1875);
-vertex(494, 367.1875);
-vertex(490, 358.1875);
-vertex(489, 350.1875);
-vertex(491, 338.1875);
-vertex(495, 331.1875);
-vertex(503, 326.1875);
+ beginShape();//ull esquerra
+vertex(508, 339.1875);
+vertex(511, 339.1875);
+vertex(512, 341.1875);
+vertex(513, 343.1875);
+vertex(512, 347.1875);
+vertex(510, 349.1875);
+vertex(507, 347.1875);
+vertex(505, 345.1875);
+vertex(505, 342.1875);
+vertex(506, 339.1875);
 endShape(CLOSE);
- beginShape();//cercle blau fosc dreta superior rosa
+ beginShape();//ull dret 
+vertex(527, 349.1875);
+vertex(531, 347.1875);
+vertex(531, 344.1875);
+vertex(529, 341.1875);
+vertex(526, 340.1875);
+vertex(524, 342.1875);
+vertex(524, 346.1875);
+vertex(525, 348.1875);
+endShape(CLOSE); 
+  beginShape();//boca
+vertex(512, 357.1875);
+vertex(517, 354.1875);
+vertex(523, 355.1875);
+vertex(526, 357.1875);
+vertex(527, 361.1875);
+vertex(526, 365.1875);
+vertex(522, 366.1875);
+vertex(518, 367.1875);
+vertex(512, 366.1875);
+vertex(510, 362.1875);
+vertex(510, 358.1875);
+endShape(CLOSE);
+ beginShape();//cercle blau fosc dreta superior 
 vertex(470, 163.1875);
 vertex(477, 160.1875);
 vertex(484, 159.1875);
@@ -8518,6 +8530,43 @@ vertex(462, 175.1875);
 vertex(463, 169.1875);
 vertex(469, 163.1875);
 endShape(CLOSE);
+ beginShape();//cella esquerra
+vertex(471, 172.1875);
+vertex(475, 169.1875);
+endShape(CLOSE);
+ beginShape();//cella dreta
+vertex(489, 170.1875);
+vertex(493, 172.1875);
+endShape(CLOSE); 
+ beginShape();//ull esquerra
+vertex(475, 175.1875);
+vertex(477, 175.1875);
+vertex(478, 178.1875);
+vertex(478, 181.1875);
+vertex(475, 182.1875);
+vertex(473, 181.1875);
+vertex(473, 178.1875);
+vertex(473, 175.1875);
+endShape(CLOSE);
+  beginShape();//ull dret
+vertex(488, 177.1875);
+vertex(490, 176.1875);
+vertex(492, 178.1875);
+vertex(491, 181.1875);
+vertex(488, 180.1875);
+vertex(487, 178.1875);
+endShape(CLOSE);    
+  beginShape();//boca
+vertex(481, 185.1875);
+vertex(484, 185.1875);
+vertex(486, 187.1875);
+vertex(486, 189.1875);
+vertex(486, 192.1875);
+vertex(484, 194.1875);
+vertex(480, 193.1875);
+vertex(478, 190.1875);
+vertex(480, 187.1875);
+endShape(CLOSE);
  beginShape();//cercle blanc dreta superior
 vertex(573, 96.1875);
 vertex(570, 94.1875);
@@ -8533,6 +8582,30 @@ vertex(587, 91.1875);
 vertex(584, 94.1875);
 vertex(580, 97.1875);
 vertex(575, 97.1875);
+endShape(CLOSE);
+ beginShape();//ull esquerra
+vertex(572, 83.1875);
+vertex(575, 82.1875);
+vertex(576, 84.1875);
+vertex(574, 86.1875);
+vertex(572, 85.1875);
+endShape(CLOSE);
+ beginShape();//ull dret 
+vertex(580, 83.1875);
+vertex(583, 83.1875);
+vertex(583, 85.1875);
+vertex(580, 86.1875);
+vertex(580, 85.1875);
+endShape(CLOSE);
+ beginShape();//boca
+vertex(577, 89.1875);
+vertex(579, 89.1875);
+vertex(581, 91.1875);
+vertex(581, 93.1875);
+vertex(578, 94.1875);
+vertex(575, 94.1875);
+vertex(573, 92.1875);
+vertex(574, 89.1875);
 endShape(CLOSE);
  beginShape();//cercle blau clar dreta superior
 vertex(534, 64.1875);
@@ -8551,22 +8624,36 @@ vertex(525, 67.1875);
 vertex(528, 65.1875);
 vertex(533, 64.1875);
 endShape(CLOSE);
- beginShape();//cecle groc dreta superior
-vertex(533, 61.1875);
-vertex(539, 61.1875);
-vertex(544, 64.1875);
-vertex(548, 70.1875);
-vertex(548, 75.1875);
-vertex(547, 80.1875);
-vertex(545, 85.1875);
-vertex(540, 88.1875);
-vertex(533, 88.1875);
-vertex(527, 87.1875);
-vertex(522, 82.1875);
-vertex(520, 74.1875);
-vertex(521, 68.1875);
-vertex(526, 64.1875);
-vertex(532, 62.1875);
+beginShape();//cella esquerra 
+vertex(524, 68.1875);
+vertex(527, 67.1875);
+endShape(CLOSE);
+  beginShape();//cella dreta
+vertex(537, 67.1875);
+vertex(541, 69.1875);
+endShape(CLOSE); 
+ beginShape();//ull esquerra 
+vertex(528, 71.1875);
+vertex(529, 72.1875);
+vertex(529, 74.1875);
+vertex(527, 74.1875);
+vertex(527, 73.1875);
+endShape(CLOSE);
+ beginShape();//ull dret 
+vertex(537, 71.1875);
+vertex(539, 72.1875);
+vertex(539, 74.1875);
+vertex(537, 74.1875);
+vertex(536, 72.1875);
+endShape(CLOSE);
+ beginShape();//boca
+vertex(532, 78.1875);
+vertex(534, 78.1875);
+vertex(535, 80.1875);
+vertex(535, 82.1875);
+vertex(533, 82.1875);
+vertex(531, 82.1875);
+vertex(531, 79.1875);
 endShape(CLOSE);
  beginShape();//cercle tricolor dreta superior
 vertex(452, 70.1875);
@@ -8591,52 +8678,154 @@ vertex(442, 79.1875);
 vertex(447, 73.1875);
 vertex(453, 69.1875);
 endShape(CLOSE);
- beginShape();//cercle centre superior 1
-vertex(394, 50.1875);
-vertex(399, 50.1875);
-vertex(402, 51.1875);
-vertex(405, 54.1875);
+ beginShape();//cella esquerra
+vertex(449, 80.1875);
+vertex(452, 78.1875);
+vertex(455, 78.1875);
+endShape(CLOSE);
+ beginShape();//Cella dreta
+vertex(467, 78.1875);
+vertex(469, 78.1875);
+vertex(470, 78.1875);
+vertex(472, 79.1875);
+endShape(CLOSE);
+ beginShape();//ull esquerra
+vertex(455, 83.1875);
+vertex(456, 84.1875);
+vertex(457, 86.1875);
+vertex(456, 88.1875);
+vertex(456, 89.1875);
+vertex(454, 89.1875);
+vertex(453, 88.1875);
+vertex(453, 86.1875);
+vertex(454, 84.1875);
+endShape(CLOSE);
+ beginShape();//ull dret
+vertex(468, 83.1875);
+vertex(469, 83.1875);
+vertex(469, 85.1875);
+vertex(469, 88.1875);
+vertex(467, 89.1875);
+vertex(466, 88.1875);
+vertex(465, 86.1875);
+vertex(466, 84.1875);
+vertex(467, 83.1875);
+endShape(CLOSE);
+ beginShape();//ull dret 
+vertex(466, 82.1875);
+vertex(469, 82.1875);
+vertex(470, 85.1875);
+vertex(470, 88.1875);
+vertex(469, 90.1875);
+vertex(467, 89.1875);
+vertex(466, 88.1875);
+vertex(466, 86.1875);
+vertex(466, 84.1875);
+endShape(CLOSE);
+ beginShape();//boca
+vertex(460, 93.1875);
+vertex(463, 93.1875);
+vertex(465, 96.1875);
+vertex(465, 100.1875);
+vertex(464, 104.1875);
+vertex(460, 105.1875);
+vertex(458, 102.1875);
+vertex(457, 98.1875);
+vertex(459, 94.1875);
+endShape(CLOSE);
+ beginShape();//dents
+vertex(458, 97.1875);
+vertex(464, 97.1875);
+endShape(CLOSE);
+ beginShape();//cercle blau fosc centre superior 
+vertex(396, 51.1875);
+vertex(401, 51.1875);
+vertex(404, 54.1875);
 vertex(407, 58.1875);
 vertex(407, 63.1875);
-vertex(405, 67.1875);
-vertex(401, 70.1875);
-vertex(395, 71.1875);
-vertex(390, 68.1875);
-vertex(387, 63.1875);
-vertex(387, 58.1875);
-vertex(389, 53.1875);
-vertex(393, 51.1875);
+vertex(404, 68.1875);
+vertex(399, 71.1875);
+vertex(391, 69.1875);
+vertex(388, 64.1875);
+vertex(387, 59.1875);
+vertex(388, 55.1875);
+vertex(392, 52.1875);
+vertex(395, 51.1875);
 endShape(CLOSE);
- beginShape();//cercle centre superior 2
-vertex(395, 54.1875);
-vertex(398, 54.1875);
-vertex(401, 55.1875);
-vertex(403, 57.1875);
-vertex(404, 60.1875);
-vertex(403, 63.1875);
-vertex(401, 66.1875);
-vertex(397, 67.1875);
-vertex(393, 66.1875);
-vertex(391, 63.1875);
-vertex(391, 60.1875);
-vertex(391, 56.1875);
-vertex(393, 55.1875);
+ beginShape();//ull esquerra 
+vertex(394, 57.1875);
+vertex(393, 58.1875);
+vertex(395, 58.1875);
 endShape(CLOSE);
- beginShape();//cercle centre superior 3
-vertex(327, 29.1875);
-vertex(331, 29.1875);
-vertex(334, 31.1875);
-vertex(336, 34.1875);
-vertex(337, 38.1875);
-vertex(336, 43.1875);
-vertex(332, 46.1875);
-vertex(328, 47.1875);
-vertex(323, 44.1875);
-vertex(320, 40.1875);
-vertex(320, 36.1875);
-vertex(322, 32.1875);
-vertex(326, 29.1875);
+  beginShape();//ull dret 
+vertex(400, 56.1875);
+vertex(399, 58.1875);
+vertex(401, 58.1875);
+endShape(CLOSE);
+  beginShape();//boca
+vertex(396, 62.1875);
+vertex(398, 61.1875);
+vertex(399, 62.1875);
+vertex(400, 64.1875);
+vertex(398, 65.1875);
+vertex(395, 65.1875);
+vertex(395, 64.1875);
+endShape(CLOSE);
+ beginShape();//cercle gris centre superior 
+vertex(324, 31.1875);
+vertex(327, 30.1875);
+vertex(331, 30.1875);
+vertex(334, 32.1875);
+vertex(337, 35.1875);
+vertex(337, 41.1875);
+vertex(334, 45.1875);
+vertex(329, 47.1875);
+vertex(322, 44.1875);
+vertex(320, 39.1875);
+vertex(323, 32.1875);
+endShape(CLOSE);
+ beginShape();//ull esquerra 
+vertex(325, 36.1875);
+vertex(325, 37.1875);
+vertex(326, 36.1875);
+endShape(CLOSE);
+  beginShape();//ull dret  
+vertex(331, 36.1875);
+vertex(331, 38.1875);
+vertex(331, 37.1875);
+endShape(CLOSE);
+  beginShape();//boca
+vertex(327, 40.1875);
+vertex(325, 43.1875);
+vertex(327, 44.1875);
+vertex(329, 44.1875);
+vertex(329, 41.1875);
+vertex(328, 40.1875);
+endShape(CLOSE);
+ beginShape();//cercle vermell centre superior 
+vertex(293, 79.1875);
+vertex(296, 77.1875);
+vertex(300, 79.1875);
+vertex(302, 82.1875);
+vertex(303, 86.1875);
+vertex(301, 88.1875);
+vertex(297, 90.1875);
+vertex(293, 89.1875);
+vertex(291, 86.1875);
+vertex(290, 83.1875);
+vertex(292, 80.1875);
 endShape(CLOSE);  
+ beginShape();//ull esquerra 
+vertex(294, 81.1875);
+endShape(CLOSE);
+ beginShape();//ull dret 
+vertex(298, 82.1875);
+endShape(CLOSE);
+  beginShape();//boca
+vertex(296, 84.1875);
+vertex(297, 85.1875);
+vertex(296, 86.1875);
+endShape(CLOSE);
  beginShape();//cercle petit blanc superior centre
 vertex(354, 97.1875);
 vertex(359, 96.1875);
@@ -8650,17 +8839,22 @@ vertex(348, 104.1875);
 vertex(350, 100.1875);
 vertex(354, 98.1875);
 endShape(CLOSE);
- beginShape();//cercle petit vermell superior centre
-vertex(295, 79.1875);
-vertex(298, 79.1875);
-vertex(300, 81.1875);
-vertex(302, 83.1875);
-vertex(301, 87.1875);
-vertex(298, 88.1875);
-vertex(295, 88.1875);
-vertex(292, 86.1875);
-vertex(292, 83.1875);
-vertex(293, 81.1875);
+ beginShape();//ull esquerra
+vertex(354, 103.1875);
+vertex(354, 103.1875);
+vertex(354, 103.1875);
+endShape(CLOSE);
+  beginShape();//ull dret  
+vertex(360, 103.1875);
+vertex(360, 103.1875);
+endShape(CLOSE);
+  beginShape();//boca
+vertex(357, 107.1875);
+vertex(355, 108.1875);
+vertex(356, 109.1875);
+vertex(358, 109.1875);
+vertex(359, 108.1875);
+vertex(358, 106.1875);
 endShape(CLOSE);
   beginShape();//cercle esquerra superior gran blanc amb negre
 vertex(291, 119.1875);
@@ -8679,26 +8873,30 @@ vertex(287, 125.1875);
 vertex(288, 122.1875);
 vertex(290, 120.1875);
 endShape(CLOSE); 
- beginShape();//cercle esquerra superior gran blanc amb negre
-vertex(286, 109.1875);
-vertex(291, 107.1875);
-vertex(296, 106.1875);
-vertex(302, 107.1875);
-vertex(309, 109.1875);
-vertex(314, 113.1875);
-vertex(316, 119.1875);
-vertex(318, 125.1875);
-vertex(318, 131.1875);
-vertex(315, 138.1875);
-vertex(311, 143.1875);
-vertex(303, 147.1875);
-vertex(295, 147.1875);
-vertex(284, 144.1875);
-vertex(280, 136.1875);
-vertex(277, 127.1875);
-vertex(278, 119.1875);
-vertex(282, 113.1875);
-vertex(285, 110.1875);
+ beginShape();//ull esquerra
+vertex(290, 121.1875);
+vertex(289, 124.1875);
+vertex(291, 126.1875);
+vertex(293, 125.1875);
+vertex(293, 122.1875);
+vertex(291, 121.1875);
+endShape(CLOSE);
+  beginShape();//ull dret 
+vertex(302, 121.1875);
+vertex(301, 123.1875);
+vertex(302, 125.1875);
+vertex(304, 124.1875);
+vertex(304, 122.1875);
+endShape(CLOSE);
+  beginShape();//boca
+vertex(292, 132.1875);
+vertex(297, 130.1875);
+vertex(302, 131.1875);
+vertex(302, 134.1875);
+vertex(302, 137.1875);
+vertex(296, 138.1875);
+vertex(292, 137.1875);
+vertex(291, 134.1875);
 endShape(CLOSE);
  beginShape();//triangle gran blau esquerra
 vertex(108, 200.1875);
@@ -9641,7 +9839,7 @@ vertex(557, 213.1875);
 endShape(CLOSE);   
           break;
           
-        case 'shame':
+         'shame':
          stroke(249, 5, 186); //rosa
 beginShape();//cercle esquerra superior gran
 vertex(26, 44.1875);
@@ -10980,7 +11178,7 @@ vertex(557, 213.1875);
 endShape(CLOSE);   
           break;
           
-          case 'scary':
+           'scary':
   stroke(114, 0, 175); // morat
 beginShape();//cercle esquerra superior gran
 vertex(26, 44.1875);
